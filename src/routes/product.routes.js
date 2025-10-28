@@ -7,3 +7,5 @@ const router =  express.Router()
 router.get('/',handleAsyncErr(GetProducts))
 
 router.get('/:slug',handleAsyncErr(GetProductsBySlug))
+
+export default router

@@ -6,6 +6,7 @@ import corsMiddleware from './middleware/cors.js';
 import passport from 'passport';
 import userRoutes from './routes/user.routes.js'
 import { addProduct } from './addProducts.js';
+import productRoutes from './routes/product.routes.js'
 
 
 
@@ -40,6 +41,10 @@ app.use(passport.initialize());
 
 // Authentication-related routes
 app.use('/api/auth', userRoutes);
+
+
+// Product Related routes
+app.use('/products',productRoutes);
 
 
 //To handle errors
